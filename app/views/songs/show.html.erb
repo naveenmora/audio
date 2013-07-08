@@ -1,0 +1,12 @@
+<p id="notice"><%= notice %></p>
+<p>
+  <b>Title:</b>
+  <%= @song.title %>
+</p>
+<p>
+
+<%= audio_tag(@path, autoplay: true, controls: true) %>
+
+</p>
+<%= link_to 'Edit', edit_song_path(@song) %> |
+<%= link_to 'Back', songs_path %>
