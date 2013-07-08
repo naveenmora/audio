@@ -1,12 +1,12 @@
 source 'https://rubygems.org'
 
-gem 'rails', '3.2.0.rc2'
+gem 'rails', '3.2.11'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
 gem 'mysql2'
-gem "paperclip"
+gem "paperclip", "~> 3.4.2"
 #gem "wav-mp3"
 #gem 'ruby-mp3info', :require => 'mp3info'
 
@@ -23,8 +23,12 @@ group :assets do
 end
 
 gem 'jquery-rails'
-gem 'pg'
 
+group :production do
+  gem 'pg'
+  gem 'therubyracer', :platforms => :ruby
+
+end
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
 
