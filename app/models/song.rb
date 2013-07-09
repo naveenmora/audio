@@ -1,6 +1,8 @@
 class Song < ActiveRecord::Base
   attr_accessible :title, :attachment
-  has_attached_file :attachment
+  has_attached_file :attachment, {
+  	:url => "/audios/:filename"
+  }
 
 
 
